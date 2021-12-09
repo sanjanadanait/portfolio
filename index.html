@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SanjanaDanait</title>
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon_ic/favicon.ico">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Section-1 Nav Bar -->
+
+  <section class="section-1" id="navbar">
+
+    <div class="container-fluid">
+
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+
+          <a class="navbar-brand" href="index.html">
+            <img alt="logo" src="images/logo.png" width="95px" height="40px">
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="uxdesign.html">All Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sanjanadanait-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </section>
+
+  <!-- Dots animation -->
+
+  <canvas class="dots">Your browser does not support canvas.</canvas>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+// ----------------------------------------
+
+var dotMargin = 100;
+var numRows = 5;
+var numCols = 10;
+// Set the colors you want to support in this array
+var colors = ['#f3f3f3', '#9d9d9d'];
+var directions = ['+', '-'];
+var speeds = [ 0.5, 1, 1.5, 2, 2.5];
+
+var canvas = $('canvas.dots');
+var context = canvas[0].getContext('2d');
+var canvasWidth = canvas.width();
+var canvasHeight = canvas.height(); // this one is new
+canvas.attr({height: canvasHeight, width: canvasWidth});
+
+var dotWidth = ((canvasWidth - (2 * dotMargin)) / numCols) - dotMargin;
+var dotHeight = ((canvasHeight - (2 * dotMargin)) / numRows) - dotMargin;
+
+if( dotWidth > dotHeight ) {
+var dotDiameter = dotHeight;
+var xMargin = (canvasWidth - ((2 * dotMargin) + (numCols * dotDiameter))) / numCols;
+var yMargin = dotMargin;
+} else {
+var dotDiameter = dotWidth;
+var xMargin = dotMargin;
+var yMargin = (canvasHeight - ((2 * dotMargin) + (numRows * dotDiameter))) / numRows;
+}
+
+// Start with an empty array of dots.
+var dots = [];
+
+var dotRadius = dotDiameter * 0.5;
+
+for(var i = 0; i < numRows; i++) {
+for(var j = 0; j < numCols; j++) {
+var x = (j * (dotDiameter + xMargin)) + dotMargin + (xMargin / 2) + dotRadius;
+var y = (i * (dotDiameter + yMargin)) + dotMargin + (yMargin / 2) + dotRadius;
+// Get random color, direction and speed.
+var color = colors[Math.floor(Math.random() * colors.length)];
+var xMove = directions[Math.floor(Math.random() * directions.length)];
+var yMove = directions[Math.floor(Math.random() * directions.length)];
+var speed = speeds[Math.floor(Math.random() * speeds.length)];
+// Set the object.
+var dot = {
+  x: x,
+  y: y,
+  radius: dotRadius,
+  xMove: xMove,
+  yMove: yMove,
+  color: color,
+  speed: speed
+};
+// Save it to the dots array.
+dots.push(dot);
+drawDot(dot);
+}
+}
+
+// Draw each dot in the dots array.
+for( i = 0; i < dots.length; i++ ) {
+drawDot(dots[i]);
+};
+
+window.requestAnimationFrame(moveDot);
+
+
+function moveDot() {
+context.clearRect(0, 0, canvasWidth, canvasHeight)
+
+for( i = 0; i < dots.length; i++ ) {
+
+  if( dots[i].xMove == '+' ) {
+    dots[i].x += dots[i].speed;
+  } else {
+    dots[i].x -= dots[i].speed;
+  }
+  if( dots[i].yMove == '+' ) {
+    dots[i].y += dots[i].speed;
+  } else {
+    dots[i].y -= dots[i].speed;
+  }
+
+  drawDot(dots[i])
+
+  if( (dots[i].x + dots[i].radius) >= canvasWidth ) {
+    dots[i].xMove = '-';
+  }
+  if( (dots[i].x - dots[i].radius) <= 0 ) {
+    dots[i].xMove = '+';
+  }
+  if( (dots[i].y + dots[i].radius) >= canvasHeight ) {
+    dots[i].yMove = '-';
+  }
+  if( (dots[i].y - dots[i].radius) <= 0 ) {
+    dots[i].yMove = '+';
+  }
+}
+
+window.requestAnimationFrame(moveDot);
+}
+
+function drawDot(dot) {
+context.globalAlpha = 0.9;
+context.beginPath();
+context.arc(dot.x, dot.y, dot.radius, 0, 2 * Math.PI, false);
+context.fillStyle = dot.color;
+context.fill();
+}
+
+// ----------------------------------------
+
+});
+  </script>
+
+  <!-- Section-2 Title -->
+
+  <section class="section-2" id="title">
+
+    <div class="container-fluid">
+
+      <div class="header">
+        <img class="title-image" src="images/monophy.gif">
+      </div>
+      <h1>I'm Sanjana Danait</h1>
+      <h2>
+        An architectural designer by education, I am now working in the field of UX research and design.
+        I am focused on creating meaningful experiences through design, enhancing human product
+        interaction through creative problem solving and am passionate about learning new things everyday.
+      </h2>
+
+      <a href="#projects">
+        <i class="chevron fa-thin fa-chevron-down fas"></i>
+      </a>
+
+    </div>
+
+  </section>
+
+
+<!--
+      <div class="row">
+        <div class="col-lg-6">
+
+        </div>
+
+        <div class="col-lg-6">
+          <img class="title-image" src="images/monophy.gif">
+        </div>
+      </div> -->
+
+
+  <!-- Section-3 Work -->
+
+  <section class="section-3" id="projects">
+
+    <div class="container-fluid">
+
+      <h2 class="section-heading"> Selected Projects </h2>
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <a href="m-indicator.html">
+            <img class="project-image-1" src="images/mi-project-image.jpg" alt="M-Indicator">
+          </a>
+          <br>
+          <b>M-Indicator: Mobile App Redesign</b> <br>
+          <em>Case Study (2021)</em>
+        </div>
+
+        <div class="col-md-4">
+          <a href="thesis.html">
+            <img class="project-image-1" src="images/thesis-project-image-3.jpg" alt="Architecture Thesis">
+          </a>
+          <br>
+          <b>Branding The Locals</b> <br>
+          <em>Thesis Research & Design Project (2019-20)</em>
+        </div>
+
+        <div class="col-md-4">
+          <a href="ekaant.html">
+            <img class="project-image-1" src="images/ekaant-project-image-1.jpg" alt="Ekaant">
+          </a>
+          <br>
+          <b>Ekaant: Set Design</b> <br>
+          <em>Freelance Project (2017)</em>
+        </div>
+
+      </div>
+
+      <br><br><br>
+      <p>To view all projects, please
+      <a href="uxdesign.html"> <b><u>click here!</u></b> </a><br><br>
+      </p>
+
+      <!--
+      <div class="row">
+        <div class="feature-box col">
+           <a href="aakriti.html">
+            <img class="project-image" alt="aakriti" src="images/aakriti-2.jpg" width="" height="">
+            <div class="img-description">
+              <em>Freelance Work</em> <br><br>
+              <h3>Aakriti: E-commerce website platform</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="feature-box col">
+          <a href="m-indicator.html">
+            <img class="project-image" alt="M-indicator" src="images/mi-project-image.jpg" width="" height="">
+            <div class="img-description">
+              <em>Case Study</em> <br><br>
+              <h3>M-indicator: Mobile App Redesign</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="feature-box col">
+          <a href="acadpal.html">
+            <img class="project-image" alt="M-indicator" src="images/mi-project-image.jpg" width="" height="">
+            <div class="img-description">
+              <em>48hr Design Challenge</em> <br><br>
+              <h3>Acadpal: Learning Management System</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="feature-box col">
+          <a href="trafficmanagement.html">
+            <img class="project-image" alt="M-indicator" src="images/mi-project-image.jpg" width="" height="">
+          </a>
+          <br>
+          <h3 class="project-title">Smart Traffic Management:</h3>
+          <p>48hr Design Challenge </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="feature-box col">
+          <a href="other-work.html">
+            <img class="project-image" alt="aakriti" src="images/other-work-cover.jpg" width="" height="">
+          </a>
+          <br>
+          <h3 class="project-title">Other works: </h3>
+          <p>Set Design, Architectural graphics, Illustrations</p>
+        </div>
+      </div>
+      -->
+
+    </div>
+  </section>
+
+
+  <!-- Footer/ Contact -->
+
+  <footer id="contact">
+    <div class="container-fluid">
+      <h3>Let's connect</h3> <br><br>
+      <p>Get in touch for opportunities or just to say hi! </p> <br><br>
+
+      <a href="mailto:sanjanad15@aoamumbai.in">
+        <i class="social-icon fas fa-envelope fa-4x"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/sanjana-danait-43622a1a9/" target="_blank" rel="noopener noreferrer">
+        <i class="social-icon fab fa-linkedin fa-4x"></i>
+      </a>
+      <br>
+      <hr>
+      <br>
+      <p>© Copyright 2021 Sanjana Danait</p>
+    </div>
+  </footer>
+
+  <!-- Cursor style -->
+
+  <div id="cursor" class="cursor"> </div>
+
+  <script>
+    var cursor = document.getElementById("cursor");
+
+    document.onmousemove = function(e) {
+      cursor.style.left = (e.pageX) + "px";
+      cursor.style.top = (e.pageY) + "px";
+      cursor.style.display = "block";
+    }
+  </script>
+
+
+</body>
+
+</html>
