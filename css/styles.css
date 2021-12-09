@@ -533,7 +533,7 @@ video {
 }
 
 .arrow-icon {
-  color: #254a52;
+  color: #353535;
   margin: 0 8px !important;
 }
 
@@ -582,10 +582,6 @@ video {
   border: 1px solid gray;
 }
 
-.col-lg-6 {
-  text-align: justify !important;
-}
-
 iframe {
   width: 1038px;
   height: 500px;
@@ -622,7 +618,7 @@ iframe {
 
   h2 {
     font-size: 2rem;
-    padding-top: 40px;
+    padding-top: 20px;
     line-height: 2.5rem;
   }
 
@@ -716,7 +712,7 @@ iframe {
 
   .header img {
     width: 60%;
-    margin-top: 360px;
+    margin-top: 380px;
   }
 
   .chevron {
@@ -781,9 +777,8 @@ iframe {
   }
 
   .big-heading {
-    font-size: 2rem;
-    line-height: 2;
-    text-align: center;
+    font-size: 3rem;
+    line-height: 3rem;
   }
 
   /* All work/ UX design page */
@@ -801,24 +796,33 @@ iframe {
 
   .col-lg-6 {
     padding-bottom: 3rem;
-    text-align: center !important;
   }
 
   /* Aakriti Case Study Page */
 
   #aakriti-section-1 .container-fluid {
-    padding: 10% 3% 10% 3%;
+    width: 100% !important;
+    padding: 12% 2% 10% 2%;
+  }
+
+  .breadcrumb-item {
+    font-size: 2rem;
   }
 
   .buttons-main {
     text-align: center;
     padding-bottom: 1em;
     padding-top: 6em;
+    width: 100%;
+  }
+
+  .buttons-main p {
+    font-size: 1.5rem;
   }
 
   .btn {
     margin: 5px 5px 0 0 !important;
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
   }
 
   .separator {
@@ -841,6 +845,17 @@ iframe {
     font-size: 1.5rem;
   }
 
+  #btn-back-to-top {
+    width: 100px;
+    height: 100px;
+    bottom: 40px;
+    right: 40px;
+  }
+
+  .btn-floating {
+    font-size: 1.5rem !important;
+  }
+
   /* Other-works */
 
   .big-heading-2 {
@@ -860,4 +875,6 @@ iframe {
 @media (min-width: 576px) {
   .container {
      max-width: 100% !important;
+   }
+
 }
