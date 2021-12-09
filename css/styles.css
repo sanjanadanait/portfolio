@@ -232,6 +232,7 @@ canvas.dots {
 .chevron {
   margin-top: 100px;
   color: #9d9d9d;
+  font-size: 1.5rem;
 }
 
 /* Section-3 Work */
@@ -245,18 +246,15 @@ canvas.dots {
   position: relative;
 }
 
-#projects h2 {
-  padding-bottom: 40px;
-}
-
 #projects .container-fluid {
   padding: 2% 12% 3% 12%;
 }
 
 .section-heading {
   font-size: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.5rem;
   text-align: center;
+  padding-bottom: 5rem;
 }
 
 
@@ -585,7 +583,7 @@ video {
 }
 
 .col-lg-6 {
-  text-align: justify!important;
+  text-align: justify !important;
 }
 
 iframe {
@@ -606,34 +604,42 @@ iframe {
   }
 
   p {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   a {
-    font: 32px;
+    font-size: 2rem !important;
+  }
+
+  u {
+    font-size: 2rem;
   }
 
   h1 {
-    font-size: 80px;
+    font-size: 5rem;
     letter-spacing: 2px;
   }
 
   h2 {
-    font-size: 32rem;
+    font-size: 2rem;
     padding-top: 40px;
-    line-height: 40px;
+    line-height: 2.5rem;
   }
 
   h3 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   ul {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   b {
-    font-size: 32px;
+    font-size: 2rem;
+  }
+
+  em {
+    font-size: 2rem;
   }
 
   hr {
@@ -677,8 +683,8 @@ iframe {
  }
 
  .nav-link {
-   font-size: 48px;
-   font-family: "Montserrat";
+   font-size: 2rem;
+   font-family: 'Roboto', sans-serif;
  }
 
  .navbar button {
@@ -703,7 +709,7 @@ iframe {
   }
 
   #title h2 {
-    padding: 40px 20px 300px;
+    padding: 40px 20px 320px;
     font-size: 28px !important;
     line-height: 3rem;
   }
@@ -713,18 +719,22 @@ iframe {
     margin-top: 360px;
   }
 
+  .chevron {
+    font-size: 2rem;
+  }
 
   #projects .container-fluid {
     padding: 3% 3% 8% 3%;
   }
 
   .section-heading {
-    font-size: 2.5rem;
-    line-height: 2.5;
+    font-size: 3rem;
+    line-height: 2.5rem;
     text-align: center;
+    padding-bottom: 4rem;
   }
 
-  .project-image {
+  .project-image-1 {
     width: 100%;
     padding-bottom: 10px;
     /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
@@ -735,6 +745,10 @@ iframe {
   .project-title {
     font-size: 2rem;
     font-weight: bold;
+  }
+
+  .col-lg-4 {
+    padding-bottom: 3rem;
   }
 
   #contact {
@@ -770,6 +784,24 @@ iframe {
     font-size: 2rem;
     line-height: 2;
     text-align: center;
+  }
+
+  /* All work/ UX design page */
+
+  .segmented-control{
+    margin-left: 0 !important;
+  }
+
+  .segmented-element a{
+    font-size: 2.5rem !important;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-right: 36px;
+  }
+
+  .col-lg-6 {
+    padding-bottom: 3rem;
+    text-align: center !important;
   }
 
   /* Aakriti Case Study Page */
@@ -812,9 +844,9 @@ iframe {
   /* Other-works */
 
   .big-heading-2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 3.5rem;
-    padding-top: 20px;
+    padding-top: 3rem;
   }
 
   .ekaant-1 {
