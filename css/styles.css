@@ -229,10 +229,6 @@ canvas.dots {
   background-color: #12a0a5;
 } */
 
-.title-image {
-  width: 100%;
-}
-
 .chevron {
   margin-top: 100px;
   color: #9d9d9d;
@@ -529,7 +525,6 @@ video {
   margin: auto;
 }
 
-
 .buttons {
   text-align: center;
   padding-top: 30px;
@@ -611,29 +606,34 @@ iframe {
   }
 
   p {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   a {
-    font: 2rem;
+    font: 32px;
+  }
+
+  h1 {
+    font-size: 80px;
+    letter-spacing: 2px;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 32rem;
     padding-top: 40px;
-    line-height: 2.5rem;
+    line-height: 40px;
   }
 
   h3 {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   ul {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   b {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   hr {
@@ -677,7 +677,7 @@ iframe {
  }
 
  .nav-link {
-   font-size: 3rem;
+   font-size: 48px;
    font-family: "Montserrat";
  }
 
@@ -702,15 +702,17 @@ iframe {
     padding: 7% 3% 4% 3%;
   }
 
-  .header img {
-    width: 100%;
-    margin-top: 200px;
+  #title h2 {
+    padding: 40px 20px 300px;
+    font-size: 28px !important;
+    line-height: 3rem;
   }
 
-  .title-image {
-    width: 90%;
-    padding: 40px 10px;
+  .header img {
+    width: 60%;
+    margin-top: 360px;
   }
+
 
   #projects .container-fluid {
     padding: 3% 3% 8% 3%;
