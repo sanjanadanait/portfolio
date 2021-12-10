@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>SanjanaDanait/Work/M-indicator Case Study</title>
+  <title>SanjanaDanait/Work/Aakriti Website Design</title>
   <link rel="icon" href="favicon.ico">
 
   <!-- Google Fonts -->
@@ -25,7 +25,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
-
 
 <body>
 
@@ -69,73 +68,133 @@
     </div>
   </section>
 
-  <!-- Section 1 -->
+  <!-- Aakriti-Section 1 -->
 
   <section class="section-6" id="aakriti-section-1">
 
     <div class="container-fluid">
 
-      <h2 class="big-heading-2">ALL PROJECTS</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="uxdesign.html">All Projects</a></li>
+          <li class="breadcrumb-item"><a href="miscellaneous.html">Miscellaneous</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Illustrations, Photography</li>
+        </ol>
+      </nav><br>
 
-      <div class="segmented-control">
+      <!-- Illustrations -->
 
-        <div class="segmented-element">
-          <a href="uxdesign.html">UX/UI Design</a>
-          <a href="architecture.html">Architecture</a>
-          <a class="bold" href="miscellaneous.html">Miscellaneous</a>
+      <div id="illustrations">
+        <h2 class="big-heading">ILLUSTRATIONS</h2>
+        <p>
+          Below are few pieces from a) an illustartion with exploration of various architectural forms such as arches and stairs, and
+          b) an abstract illustration series I came up with by experimenting with colors, contrast and lines, using pictures I had captured.
+        </p><br><br>
+
+        <div class="hifi">
+          <a href="images/illustrations-1.jpg" target="_blank" rel="noopener noreferrer">
+            <img class="hifi2" src="images/illustrations-1.jpg" alt="Illustrations">
+          </a><br>
         </div>
 
-      </div>
+      </div><br><br>
 
-      <!-- Other work -->
+      <!-- Photography -->
 
-      <div class="row">
-        <div class="col-lg-6">
-          <a href="ekaant.html">
-            <img class="project-image-1" src="images/ekaant-project-image-1.jpg" alt="Ekaant">
-          </a>
-          <br>
-          <b>Ekaant: Set Design</b> <br>
-          <em>Freelance Project (2017)</em>
+      <div id="photography">
+        <hr class="separator">
+        <h2 class="big-heading">PHOTOGRAPHY</h2>
+        <p>
+          I am passionate about photography and love capturing the symmetry, shadows and patterns hidden in nature and buildings.
+          Below are some frames I've captured through past few years of my travel in various cities in India and abroad.
+        </p><br><br>
+
+        <div class="hifi">
+          <a href="images/photography-1.jpg" target="_blank" rel="noopener noreferrer">
+            <img class="hifi2" src="images/photography-1.jpg" alt="Photography">
+          </a><br>
         </div>
 
-        <div class="col-lg-6">
-          <a href="personalProjects.html">
-            <img class="project-image-1" src="images/miscellaneous-project-image.jpg" alt="Illustrations">
-          </a>
-          <br>
-          <b>Illustrations, Photography</b> <br>
-          <em>Personal Projects</em>
+        <div class="hifi">
+          <a href="images/photography-2.jpg" target="_blank" rel="noopener noreferrer">
+            <img class="hifi2" src="images/photography-2.jpg" alt="Photography">
+          </a><br>
         </div>
+
+      </div><br><br>
+
+
+      <!-- Previous Next Buttons-->
+
+      <div class="buttons">
+
+        <a href="placemaking.html">
+          <i class="arrow-icon fas fa-chevron-left"></i> Previous
+        </a>
+
+        <a href="uxdesign.html">
+          All Projects <i class="arrow-icon fas fa-chevron-right"></i>
+        </a>
       </div>
 
     </div>
-
   </section>
-
 
 
   <!-- Footer/ Contact -->
 
   <footer id="contact">
     <div class="container-fluid">
-
-      <h3>Let's connect</h3> <br><br>
-      <p>Get in touch for opportunities or just to say hi! </p> <br><br>
-
-      <a href="mailto:sanjanad15@aoamumbai.in">
-        <i class="social-icon fas fa-envelope fa-4x"></i>
-      </a>
-
-      <a href="https://www.linkedin.com/in/sanjana-danait-43622a1a9/">
-        <i class="social-icon fab fa-linkedin fa-4x"></i>
-      </a>
       <br>
+      <h3>Get in touch</h3> <br>
+
+      <a href="mailto:sanjana2397@gmail.com">
+        <i class="social-icon fas fa-envelope fa-3x"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/sanjana-danait-43622a1a9/" target="_blank" rel="noopener noreferrer">
+        <i class="social-icon fab fa-linkedin fa-3x"></i>
+      </a>
+      <br><br>
       <hr>
       <br>
       <p>© Copyright 2021 Sanjana Danait</p>
     </div>
   </footer>
+
+  <!-- Back to top button -->
+
+  <button type="button" class="btn btn-default btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up fa-2x"></i>
+  </button>
+
+  <script type="text/javascript">
+    //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 
   <!-- Cursor style -->
 
@@ -144,11 +203,12 @@
   <script>
     var cursor = document.getElementById("cursor");
 
-    document.onmousemove = function(e) {
+    document.onmousemove = function(e){
       cursor.style.left = (e.pageX) + "px";
       cursor.style.top = (e.pageY) + "px";
       cursor.style.display = "block"
     }
+
   </script>
 
 </body>
