@@ -90,8 +90,8 @@ var canvasWidth = canvas.width();
 var canvasHeight = canvas.height(); // this one is new
 canvas.attr({height: canvasHeight, width: canvasWidth});
 
-var dotWidth = ((canvasWidth - (2 * dotMargin)) / numCols) - dotMargin;
-var dotHeight = ((canvasHeight - (2 * dotMargin)) / numRows) - dotMargin;
+var dotWidth = ((canvasWidth - (1.5 * dotMargin)) / numCols) - dotMargin;
+var dotHeight = ((canvasHeight - (1.5 * dotMargin)) / numRows) - dotMargin;
 
 if( dotWidth > dotHeight ) {
 var dotDiameter = dotHeight;
@@ -106,7 +106,7 @@ var yMargin = (canvasHeight - ((2 * dotMargin) + (numRows * dotDiameter))) / num
 // Start with an empty array of dots.
 var dots = [];
 
-var dotRadius = dotDiameter * 0.5;
+var dotRadius = dotDiameter * 0.1;
 
 for(var i = 0; i < numRows; i++) {
 for(var j = 0; j < numCols; j++) {
