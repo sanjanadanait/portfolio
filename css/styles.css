@@ -80,6 +80,10 @@ canvas.dots {
 
 /* Back to top button */
 
+.fa-arrow-up {
+  font-size: 30px !important;
+}
+
 #btn-back-to-top {
   width: 60px;
   height: 60px;
@@ -585,6 +589,14 @@ video {
   border: 1px solid gray;
 }
 
+/*iframe {
+  width: 1038px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
 
 /* Media queries */
 
@@ -612,9 +624,9 @@ video {
   }
 
   h2 {
-    font-size: 2rem;
-    padding-top: 20px;
-    line-height: 2.5rem;
+    font-size: 2rem !important;
+    padding-top: 20px !important;
+    line-height: 2.5rem !important;
   }
 
   h3 {
@@ -700,13 +712,13 @@ video {
  }
 
   #title .container-fluid {
-    padding: 7% 3% 4% 3%;
+    padding: 7% 3% 4% 3% !important;
   }
 
   #title h2 {
-    padding: 40px 20px 320px;
-    font-size: 32px !important;
-    line-height: 3rem;
+    padding: 40px 20px 300px !important;
+    font-size: 28px !important;
+    line-height: 3rem !important;
   }
 
   .header img {
@@ -723,8 +735,8 @@ video {
   }
 
   .section-heading {
-    font-size: 3rem;
-    line-height: 2.5rem;
+    font-size: 3rem !important;
+    line-height: 2.5rem !important;
     text-align: center;
     padding-bottom: 4rem;
   }
@@ -787,7 +799,7 @@ video {
   }
 
   .segmented-element a{
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     padding-bottom: 2rem;
     padding-top: 2rem;
     padding-right: 32px;
@@ -800,7 +812,7 @@ video {
   /* Aakriti Case Study Page */
 
   #aakriti-section-1 .container-fluid {
-    padding: 12% 2% 10% 2%;
+    padding: 12% 2% 10% 2% !important;
   }
 
   .breadcrumb-item {
@@ -855,10 +867,6 @@ video {
     height: 100px;
   }
 
-  .btn-floating {
-    font-size: 1.5rem !important;
-  }
-
   /* Placemaking */
 
   .binaries p{
@@ -869,9 +877,9 @@ video {
   /* Other-works */
 
   .big-heading-2 {
-    font-size: 3rem;
-    line-height: 3.5rem;
-    padding-top: 3rem;
+    font-size: 3rem !important;
+    line-height: 3.5rem !important;
+    padding-top: 3rem !important;
   }
 
   .ekaant-1 {
@@ -885,6 +893,6 @@ video {
 @media (min-width: 576px) {
   .container {
      max-width: 100% !important;
-  }
+   }
 
 }
