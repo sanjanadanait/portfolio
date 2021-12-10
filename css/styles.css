@@ -569,6 +569,11 @@ video {
 
 /* Placemaking */
 
+
+#design-process .col-lg-6 {
+  text-align: left !important;
+}
+
 .binaries p{
   color: #254a52;
   padding-right: 8px;
