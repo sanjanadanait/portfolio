@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>SanjanaDanait/Work/Aakriti Website Design</title>
+  <title>SanjanaDanait/Work/M-indicator Case Study</title>
   <link rel="icon" href="favicon.ico">
 
   <!-- Google Fonts -->
@@ -25,6 +25,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
+
 
 <body>
 
@@ -68,96 +69,50 @@
     </div>
   </section>
 
-  <!-- Aakriti-Section 1 -->
+  <!-- Section 1 -->
 
   <section class="section-6" id="aakriti-section-1">
 
     <div class="container-fluid">
 
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="uxdesign.html">All Projects</a></li>
-          <li class="breadcrumb-item"><a href="miscellaneous.html">Miscellaneous</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Illustrations, Photography, Upcycled Product Design</li>
-        </ol>
-      </nav><br>
+      <h2 class="big-heading-2">ALL PROJECTS</h2>
 
-      <!-- Illustrations -->
+      <div class="segmented-control">
 
-      <div id="illustrations">
-        <h2 class="big-heading">ILLUSTRATIONS</h2>
-        <p>
-          Below are few pieces from a) an illustartion with exploration of various architectural forms such as arches and stairs, and
-          b) an abstract illustration series I came up with by experimenting with colors, contrast and lines, using pictures I had captured.
-        </p><br><br>
-
-        <div class="hifi">
-          <a href="images/illustrations-1.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="hifi2" src="images/illustrations-1.jpg" alt="Illustrations">
-          </a><br>
+        <div class="segmented-element">
+          <a href="uxdesign.html">UX/UI Design</a>
+          <a href="architecture.html">Architecture</a>
+          <a class="bold" href="miscellaneous.html">Miscellaneous</a>
         </div>
 
-      </div><br><br>
+      </div>
 
-      <!-- Photography -->
+      <!-- Other work -->
 
-      <div id="photography">
-        <hr class="separator">
-        <h2 class="big-heading">PHOTOGRAPHY</h2>
-        <p>
-          I am passionate about photography and love capturing the symmetry, shadows and patterns hidden in nature and buildings.
-          Below are some frames I've captured through past few years of my travel in various cities in India and abroad.
-        </p><br><br>
-
-        <div class="hifi">
-          <a href="images/photography-1.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="hifi2" src="images/photography-1.jpg" alt="Photography">
-          </a><br>
+      <div class="row">
+        <div class="col-lg-6">
+          <a href="ekaant.html">
+            <img class="project-image-1" src="images/ekaant-project-image-1.jpg" alt="Ekaant">
+          </a>
+          <br>
+          <b>Ekaant: Set Design</b> <br>
+          <em>Freelance Project (2017)</em>
         </div>
 
-        <div class="hifi">
-          <a href="images/photography-2.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="hifi2" src="images/photography-2.jpg" alt="Photography">
-          </a><br>
+        <div class="col-lg-6">
+          <a href="personalProjects.html">
+            <img class="project-image-1" src="images/miscellaneous-project-image.jpg" alt="Illustrations">
+          </a>
+          <br>
+          <b>Illustrations, Photography</b> <br>
+          <em>Personal Projects</em>
         </div>
-
-      </div><br><br>
-
-      <!-- Product Design -->
-
-      <div id="product-design">
-        <hr class="separator">
-        <h2 class="big-heading">UPCYCLED PRODUCT DESIGN</h2>
-        <p>
-          During the Indian festival of Diwali in 2021, I collaborated with a friend to make <em>'diyas'</em> (traditional Diwali lamps)
-          using upcycled materials. We used acrylic pieces left over from the large sheets used for signages and branding
-          purposes to make the <em>'diya'</em> holders, and also incorporated the traditional <em>'Swastik'</em> pattern in the design. Old,
-          leftover pieces of wax and crayons were then collected and melted to make the <em>'diyas'</em>.
-        </p><br><br>
-        <div class="mi-video">
-          <video width="300" height="" controls>
-            <source src="images/product-1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div><br><br>
-
-
-      <!-- Previous Next Buttons-->
-
-      <div class="buttons">
-
-        <a href="placemaking.html">
-          <i class="arrow-icon fas fa-chevron-left"></i> Previous
-        </a>
-
-        <a href="uxdesign.html">
-          All Projects <i class="arrow-icon fas fa-chevron-right"></i>
-        </a>
       </div>
 
     </div>
+
   </section>
+
 
 
   <!-- Footer/ Contact -->
@@ -182,40 +137,6 @@
     </div>
   </footer>
 
-  <!-- Back to top button -->
-
-  <button type="button" class="btn btn-default btn-floating btn-lg" id="btn-back-to-top">
-    <i class="fas fa-arrow-up fa-2x"></i>
-  </button>
-
-  <script type="text/javascript">
-    //Get the button
-    let mybutton = document.getElementById("btn-back-to-top");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {
-      scrollFunction();
-    };
-
-    function scrollFunction() {
-      if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-      ) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-    // When the user clicks on the button, scroll to the top of the document
-    mybutton.addEventListener("click", backToTop);
-
-    function backToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-
   <!-- Cursor style -->
 
   <div id="cursor" class="cursor"> </div>
@@ -223,12 +144,11 @@
   <script>
     var cursor = document.getElementById("cursor");
 
-    document.onmousemove = function(e){
+    document.onmousemove = function(e) {
       cursor.style.left = (e.pageX) + "px";
       cursor.style.top = (e.pageY) + "px";
       cursor.style.display = "block"
     }
-
   </script>
 
 </body>
