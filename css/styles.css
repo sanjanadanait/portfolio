@@ -740,14 +740,14 @@ video {
   }
 
   #title h2 {
-    padding: 40px 20px 300px !important;
-    font-size: 28px !important;
+    padding: 40px 0 300px !important;
+    font-size: 32px !important;
     line-height: 3rem !important;
   }
 
   .header img {
     width: 60%;
-    margin-top: 420px;
+    margin-top: 360px;
   }
 
   .chevron {
