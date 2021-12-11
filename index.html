@@ -82,7 +82,7 @@ var numCols = 10;
 // Set the colors you want to support in this array
 var colors = ['#f3f3f3', '#d7d7d7'];
 var directions = ['+', '-'];
-var speeds = [0.25, 0.5, 1, 1.5, 2];
+var speeds = [ 0.25, 0.5, 1, 1.5, 2];
 
 var canvas = $('canvas.dots');
 var context = canvas[0].getContext('2d');
@@ -106,7 +106,7 @@ var yMargin = (canvasHeight - ((2 * dotMargin) + (numRows * dotDiameter))) / num
 // Start with an empty array of dots.
 var dots = [];
 
-var dotRadius = dotDiameter * 0.11;
+var dotRadius = dotDiameter * 0.15;
 
 for(var i = 0; i < numRows; i++) {
 for(var j = 0; j < numCols; j++) {
@@ -204,6 +204,7 @@ context.fill();
         I am focused on creating meaningful experiences through design, enhancing human product
         interaction through creative problem solving and am passionate about learning new things everyday.
       </h2>
+      <br><br><br><br><br><br>
 
       <a href="#projects">
         <i class="chevron fa-thin fa-chevron-down fas"></i>
