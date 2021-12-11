@@ -195,9 +195,9 @@ canvas.dots {
 
 #title h2 {
   text-align: center;
-  padding: 30px 100px 0;
-  font-size: 18px !important;
-  line-height: 2rem;
+  padding: 30px 20px 0;
+  font-size: 22px !important;
+  line-height: 2.5rem;
 }
 
 #title .container-fluid {
@@ -220,19 +220,13 @@ canvas.dots {
 }
 
 .header img {
-  width: 25%;
-  margin-top: 80px;
+  width: 20%;
+  margin-top: 40px;
   align-items: center;
   opacity: 0.8;
 }
 
-/*
-.header img:hover {
-  background-color: #12a0a5;
-} */
-
 .chevron {
-  margin-top: 100px;
   color: #9d9d9d;
   font-size: 1.5rem;
 }
